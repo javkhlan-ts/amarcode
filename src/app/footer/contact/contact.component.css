@@ -1,0 +1,10 @@
+body {
+    background-image: url('../../../assets/images/contact-background.jpg');
+    background-size: contain;
+    opacity: .9;
+    height: 100vh;
+}
+
+.material-icons{
+    vertical-align: -3px;
+}

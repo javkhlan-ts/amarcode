@@ -1,0 +1,20 @@
+<div class="container-md">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card text-center">
+                <!-- <div class="card-header">
+                    {{post.title}}
+                </div> -->
+                <div class="card-body">
+                    <h1 class="card-title">{{post.title}}</h1>
+                    <p class="card-text"> {{post.content}} </p>
+                    <video class="card-video" controls muted="muted">
+                        <source [src]="post.videoPath" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <h1 class="m-3">Latest videos:</h1>
+            <app-carousel></app-carousel>
+        </div>
+    </div>
+</div>

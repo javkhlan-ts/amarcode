@@ -1,0 +1,10 @@
+:host {
+    display: block;
+    margin: 1rem;
+}
+
+.card-img-top,
+.card-video {
+    height: 250px;
+    object-fit: contain;
+}

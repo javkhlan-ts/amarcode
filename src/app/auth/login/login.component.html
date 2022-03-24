@@ -1,0 +1,40 @@
+<section>
+    <div class="container-md">
+        <div class="row justify-content-center p-3">
+            <div class="col-12 col-sm-9 col-lg-6">
+                <form (submit)="onLogin(loginForm)" #loginForm="ngForm" class="border rounded shadow p-5 bg-white">
+                    <p class="h6 text-center">AMARCODE LOGIN</p>
+                    <button class="btn btn-dark btn-block">Login with Github</button>
+                    <button class="btn btn-outline-dark btn-block">Login with Google</button>
+                    <button class="btn btn-primary btn-block">Login with Facebook</button>
+                    <hr>
+                    <div class="form-group">
+                      <input 
+                        type="email" 
+                        class="form-control" 
+                        placeholder="Email" 
+                        required
+                        ngModel
+                        name="email">
+                    </div>
+                    <div class="form-group">
+                      <input 
+                        type="password" 
+                        class="form-control" 
+                        placeholder="Password" 
+                        required
+                        ngModel
+                        name="password">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input">
+                      <label class="form-check-label">Remember me</label>
+                      <a class="float-right" routerLink="/resetPassword">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">LOGIN</button>
+                    <p class="text-center py-3">New user? <a routerLink="/signup">Signup</a></p>
+                  </form>
+            </div>
+        </div>
+    </div>
+</section>

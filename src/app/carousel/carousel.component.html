@@ -1,0 +1,50 @@
+  
+  <!-- Carousel 1 ANGULAR: START -->
+  <ngb-carousel>
+
+    <!-- Carousel 1 - Page 1 -->
+    <ng-template ngbSlide>
+      <div class="container p-3">
+        <div class="row text-center">
+          <div 
+            class="col-md-4 p-0" 
+            *ngFor="let card of cards| slice:0:3; let i=index"
+            [routerLink]="['/content', card.id]">
+            <mat-card class="card mx-auto" style="width: 18rem;">
+              <img mat-card-image [src]="card.imagePath">
+              <mat-card-title>
+                <p class="card-text text-dark">{{ card.title }}</p>
+              </mat-card-title>
+              <mat-card-content>
+                <p class="card-text text-dark">{{ card.content }}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Carousel 1 - Page 2 -->
+    <ng-template ngbSlide>
+      <div class="container p-3">
+        <div class="row text-center">
+          <div 
+            class="col-md-4 p-0" 
+            *ngFor="let card of cards | slice:3:6; let i=index" 
+            [routerLink]="['/content', card.id]">
+            <mat-card class="card mx-auto" style="width: 18rem;">
+              <img mat-card-image [src]="card.imagePath">
+              <mat-card-title>
+                <p class="card-text text-dark">{{ card.title }}</p>
+              </mat-card-title>
+              <mat-card-content>
+                <p class="card-text text-dark">{{ card.content }}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+  </ngb-carousel>
+  <!-- Carousel 1 ANGULAR: END -->

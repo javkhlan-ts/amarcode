@@ -1,0 +1,9 @@
+mat-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+mat-card {
+    height: 25rem;
+    overflow: hidden;
+}

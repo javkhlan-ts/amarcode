@@ -1,0 +1,19 @@
+main{
+    padding-bottom: 6rem; 
+    padding-top: 3rem; 
+    background-color: rgb(41, 43, 44);
+    height: 100vh;
+}
+
+.icon {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-display{
+    transform: scale(2);
+}

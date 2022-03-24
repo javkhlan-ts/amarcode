@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-md">
+    <span class="navbar-brand text-uppercase">
+      <a routerLink="/home">
+        <span class="material-icons">polymer</span>
+        AmarCode
+      </a>
+    </span>
+    <!-- menu button when collapsed -->
+    <button 
+      class="navbar-toggler" type="button" aria-controls="navbarContent" 
+      [attr.aria-expanded]="!collapsed" aria-label="Toggle navigation" 
+      (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Catalog and Login -->
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link active" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">
+            Catalog
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+            <a ngbDropdownItem
+            *ngFor="let catalogItem of catalogItems">{{ catalogItem }}</a>
+          </div>
+        </li>
+        <!-- Login -->
+        <li *ngIf="!userIsAuthenticated" class="nav-item" ngbDropdown>
+          <button 
+            type="button" 
+            class="btn btn-outline-light" 
+            data-mdb-ripple-color="dark"
+            routerLink="/login">
+            Login
+          </button>
+        </li>
+        <!-- Logout -->
+        <li *ngIf="userIsAuthenticated" class="nav-item" ngbDropdown>
+          <button (click)="onLogout()"
+            type="button" 
+            class="btn btn-outline-light" 
+            data-mdb-ripple-color="dark">
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

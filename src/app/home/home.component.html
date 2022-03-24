@@ -1,0 +1,30 @@
+<main class="text-white">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <!-- style="display: flex; justify-content: center;" -->
+      <div class="row justify-content-center">
+        <h1 class="text-uppercase py-3">Coding Made Easier</h1>
+        <p class="h5 text-center">Programming is, quite literally, all around us and most people think coding is hard to 
+          learn. It is quite the opposite if you find someone explains you well. Please enjoy
+          my FREE tutorials on full stack web development as well as Python.</p>
+      </div>
+    </div>
+  </header>
+  <!-- Section -->
+  <section class="icons py-3">
+    <div class="container p-3">
+      <div class="row text-center">
+        <div class="col-md-4" *ngFor="let i of intro">
+          <div class="icon bg-light mb-4 text-dark">
+            <mat-icon class="icon-display">{{ i.icon }}</mat-icon>
+          </div>
+          <p class="h5">{{ i.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-carousel></app-carousel>
+
+</main>

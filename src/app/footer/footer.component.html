@@ -1,0 +1,39 @@
+<footer class="bg-light fixed-bottom">
+    <!-- Container wrapper -->
+    <div class="container-md p-3">
+        <div class="row">
+        <div class="col-md-6 px-0">
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">© 2021 AMARCODE</li>
+                <li class="list-inline-item">
+                    <a class="text-dark text-decoration-none" routerLink="/about">About</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="text-dark text-decoration-none" routerLink="/privacy">Privacy</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="text-dark text-decoration-none" routerLink="/contact">Contact</a>
+                </li>
+                <!-- *ngIf="userIsAuthenticated" -->
+                <li  *ngIf="userIsAuthenticated" class="list-inline-item">
+                    <a class="text-dark text-decoration-none" routerLink="/upload"><strong>Upload</strong></a>
+                </li>
+                <li  *ngIf="userIsAuthenticated" class="list-inline-item">
+                    <a class="text-dark text-decoration-none" routerLink="/myuploads"><strong>My Videos</strong></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-6">
+            <ul class="list-inline mb-0" style="float: right">
+                <li class="list-inline-item"><img src="assets/icons/icon_fb.png"></li>
+                <li class="list-inline-item"><img src="assets/icons/icon_insta.png"></li>
+                <li class="list-inline-item"><img src="assets/icons/icon_linkedin.png"></li>
+                <li class="list-inline-item"><img src="assets/icons/icon_twitter.png"></li>
+                <li class="list-inline-item"><img src="assets/icons/icon_youtube.png"></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</footer>
